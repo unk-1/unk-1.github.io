@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Report</title>
+    <script src="dew://lib/dew.js"></script>
+    <script src="dew://lib/jquery-2.2.1.min.js"></script>
+    <script src="dew://lib/window-resize.js"></script>
+    <link rel="stylesheet" type="text/css" href="dew://lib/window-resize.css" />
+    <link rel="stylesheet" type="text/css" href="report.css" />
+    <link rel="stylesheet" type="text/css" href="dew://lib/css/popup.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div class="page_content">
+            <div class="report_container">
+                <div class="report_overlay"></div>
+                <div class="report_window dialog">
+                    <div class="report_form">
+                        <div class="report_window_header">
+                            <span class="report_window_title">Report a player</span>
+                        </div>
+                        <div class="report_window_body">
+
+                            <div class="report_form_group">
+                                <label for="reportReason">Reason: </label>
+                                <select id="reportReason">
+                                    <option value="cheating">Cheating</option>
+                                    <option value="betraying">Team Killing</option>
+                                    <option value="offensiveLanquage">Offensive Lanquage</option>
+                                    <option value="offensiveName">Offensive Name</option>
+                                    <option value="unsporting">Unsporting</option>
+                                    <option value="threatening">Threatening</option>
+                                    <option value="afk">AFK</option>
+                                    <option value="chatAbuse">Chat Abuse</option>
+                                    <option value="voipAbuse">VoIP Abuse</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="report_form_group">
+                                <label for="reportDetail">Detail: </label>
+                                <textarea class="report_detail_input" id="reportDetail" maxlength="140" rows="4"></textarea>
+                            </div>
+                            <div class="report_form_group">
+                                <div class="report_form_group_horizontal">
+                                    <label for="reportContactType">How can we contact you?: </label>
+                                    </br>
+                                    <select id="reportContactType">
+                                        <option value="email">E-mail</option>
+                                        <option value="discord">Discord</option>
+                                        <option value="reddit">Reddit</option>
+                                        <option value="none">No contact</option>
+                                    </select>
+                                    <input type="text" id="reportContactInfo" placeholder="Contact info...">
+                                </div>
+                            </div>
+                            <div class="report_form_group">
+                                <label>Captcha: </label>
+
+                                
+                                <div class="report_captcha">
+                                        <div id="recaptcha-service" class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LfYmF8UAAAAAOMgspthygM7g5lroiPfIWYalYZE"></div>
+                                       <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="report_window_footer">
+                            <button id="reportSubmit">
+                                <img class="button" style="display: none;">Submit</button>
+                            <button id="reportCancel">
+                                <img class="button" style="display: none;">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="report.js"></script>
+</body>
+
+</html>
